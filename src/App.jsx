@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { v4 as uuidv4 } from 'uuid';
+
 import './App.scss';
 import Header from "./component/Header";
 import Container from "./component/Container";
@@ -51,12 +51,6 @@ function App() {
     <div className="App">
       <Header/>
       <UserInput OnAddHandler={OnAddHandler} OnCancleHandler={OnCancleHandler} OnInputChangeHandler ={OnInputChangeHandler} inputValue = {inputState} />
-      {/* <div className="UserInput" >
-        <input  value={inputState} onChange={(e)=>OnInputChangeHandler(e.target.value)} className="UserInput__Text" type="text" />
-        <button onClick={OnCancleHandler} className="UserInput__Cancle">Cancle</button>
-        <button onClick={()=>OnAddHandler(uuidv4())} className="UserInput__Add">Add</button>
-      </div> */}
-
       <Container allTask = {allTask} OnEditHandeler ={OnEditHandeler} OnItemDeleteHandeler ={OnItemDeleteHandeler}/>
     </div>
   );
